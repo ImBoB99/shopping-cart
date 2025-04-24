@@ -1,0 +1,45 @@
+.navContainer {
+  background-color: var(--background-dark);
+}
+
+.navContainerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px; 
+  margin: 0 auto;
+}
+
+.brandTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  user-select: none;
+}
+
+.odin {
+  color: var(--text-light);
+}
+
+.buyGradient {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.navLinks a {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.2s ease-in;
+}
+
+.navLinks a:hover {
+  color: var(--secondary-color);
+}

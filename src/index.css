@@ -1,7 +1,11 @@
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
+/* colors.css */
+:root {
+  --primary-color: oklch(85.2% 0.199 91.936);
+  --secondary-color: oklch(75% 0.183 55.934);
+  --background-dark: oklch(26.9% 0 0);
+  --text-light: oklch(98.5% 0 0);
+}
+
 
 *, *::before, *::after {
   box-sizing: border-box;
