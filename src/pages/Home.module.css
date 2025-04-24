@@ -1,0 +1,76 @@
+.container {
+  min-height: 100%;
+  width: 100%;
+  background-color: var(--background-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  gap: 1rem;
+}
+
+.brandTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  user-select: none;
+  color: var(--text-light);
+}
+
+.odin {
+  color: var(--text-light);
+}
+
+.buyGradient {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brandDescription {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.brandCTA {
+  margin: 3rem 0;
+  padding: 1rem 1.5rem;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  color: #101010;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: transform 0.2s ease-in-out;
+}
+
+.brandCTA:hover {
+  transform: translateY(-5px)
+}
+
+.featuredCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media only screen and (max-width: 1080px) {
+  .container {
+    padding-top: 2rem;
+  }
+  .featuredCardsGrid {
+    grid-template-columns: repeat(1, minmax(180px, 1fr));
+    max-width: 500px;
+    padding: 1rem;
+  }
+}

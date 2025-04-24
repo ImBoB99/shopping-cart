@@ -2,8 +2,10 @@
 :root {
   --primary-color: oklch(85.2% 0.199 91.936);
   --secondary-color: oklch(75% 0.183 55.934);
-  --background-dark: oklch(26.9% 0 0);
+  --background-light: oklch(26.9% 0 0);
+  --background-dark: oklch(14.5% 0 0);
   --text-light: oklch(98.5% 0 0);
+  --text-dark: oklch(87% 0 0);
 }
 
 
@@ -50,4 +52,20 @@ h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
   isolation: isolate;
+}
+
+/* These make the home page 100vh */
+html, body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
 }
