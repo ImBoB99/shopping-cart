@@ -1,0 +1,50 @@
+.container {
+  min-height: 100%;
+  width: 100%;
+  background-color: var(--background-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 3rem;
+}
+
+.containerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  user-select: none;
+  color: var(--text-light);
+}
+
+.description {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    padding-block: 2rem;
+  }
+  .containerInner {
+    padding-inline: 2rem;
+  }
+  .title {
+    line-height: 1.25;
+  }
+}
