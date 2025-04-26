@@ -48,9 +48,33 @@ a.activeLink {
   color: white;
   height: 100%;
   width: 32px;
-  transition: scale 0.2s ease-in-out;
 }
 
-.cartIcon:hover {
-  scale: 1.1;
+/* Add a dynamic data number for amount of items in cart */
+.cartIconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
 }
+
+.cartIconWrapper:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.cartIconWrapper::before {
+  content: attr(data-count);
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 999px;
+  min-width: 20px;
+  text-align: center;
+}
+

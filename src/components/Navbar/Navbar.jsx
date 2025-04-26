@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { ShoppingCart } from "lucide-react";
 
-function Navbar() {
+function Navbar({ cartItemQuantity }) {
   return (
     <nav className={styles.navContainer}>
       <h1 className={styles.brandTitle}>
@@ -18,7 +18,9 @@ function Navbar() {
         </NavLink>
       </div>
       <Link to="/shopping-cart">
-        <ShoppingCart className={styles.cartIcon} />
+        <div className={styles.cartIconWrapper} data-count={cartItemQuantity}>
+          <ShoppingCart className={styles.cartIcon} />
+        </div>
       </Link>
     </nav>
   );

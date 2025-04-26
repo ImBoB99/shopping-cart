@@ -29,11 +29,13 @@
   text-align: center;
 }
 
-.shopGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+.cartContainer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  border-radius: 8px;
+  background-color: white;
+  padding: 2rem;
 }
 
 @media only screen and (max-width: 1280px) {

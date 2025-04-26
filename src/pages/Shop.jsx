@@ -1,7 +1,10 @@
 import styles from "./Shop.module.css";
 import ProductCard from "../components/ProductCard/ProductCard";
+import { useOutletContext } from "react-router-dom";
 
 function Shop() {
+  const { addToCart, productsData, fetchError } = useOutletContext();
+
   return (
     <div className={styles.container}>
       <div className={styles.containerInner}>
@@ -12,19 +15,26 @@ function Shop() {
         </p>
 
         {/* Need to add styling, search input and category switcher */}
-        <div className={styles.shopControls}>
-          
-        </div>
+        <div className={styles.shopControls}></div>
 
         <div className={styles.shopGrid}>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
+          {fetchError ? (
+            <p>A network error was encountered</p>
+          ) : (
+            productsData.map((product) => (
+              <ProductCard
+                key={product.id}
+                id={product.id}
+                title={product.title}
+                price={product.price}
+                category={product.category}
+                image={product.image}
+                rating={product.rating.rate}
+                ratingCount={product.rating.count}
+                addToCart={addToCart}
+              ></ProductCard>
+            ))
+          )}
         </div>
       </div>
     </div>
