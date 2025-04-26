@@ -38,6 +38,67 @@
   padding: 2rem;
 }
 
+.cartEmpty {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.finalPrice {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-left: auto;
+  margin-block: 2rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.shoppingButton {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: black;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  width: 100%;
+  max-width: 200px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.shoppingButton:hover {
+  background-color: var(--secondary-color);
+}
+
+.checkoutButton {
+  text-align: center;
+  background-color: oklch(62.7% 0.194 149.214);
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  width: 100%;
+  max-width: 200px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: auto;
+}
+
+.checkoutButton:hover {
+  background-color: oklch(52.7% 0.154 150.069);
+}
+
 @media only screen and (max-width: 1280px) {
   .container {
     padding-block: 2rem;

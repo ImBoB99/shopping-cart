@@ -4,6 +4,7 @@
   padding: 2rem 1rem;
   border-bottom: 1px solid var(--text-dark);
   position: relative;
+  gap: 1rem;
 }
 
 .productCard:last-child {
@@ -71,6 +72,8 @@
 .deleteProduct {
   font-size: 1rem;
   position: absolute;
+  background-color: transparent;
+  border: none;
   right: 0;
   top: 10px;
   cursor: pointer;

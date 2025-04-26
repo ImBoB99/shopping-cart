@@ -16,16 +16,28 @@ export default function AppLayout() {
         return response.json();
       })
       .then((data) => {
-        console.log("Fetched products:", data);
         setProductsData(data);
       })
       .catch((error) => setFetchError(error));
   }, []);
 
   function addToCart(productId, productQuantity) {
-    setCartItems((prevItems) => [...prevItems, { id: productId, quantity: productQuantity }]);
-    console.log(cartItems);
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((item) => item.id === productId);
+      if (existingItem) {
+        // Update the quantity of the existing item
+        return prevItems.map((item) =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity + productQuantity }
+            : item
+        );
+      } else {
+        // Add new item to the cart
+        return [...prevItems, { id: productId, quantity: productQuantity }];
+      }
+    });
   }
+  
 
   function removeFromCart(productId) {
     const updatedCart = cartItems.filter((item) => item.id !== productId)
